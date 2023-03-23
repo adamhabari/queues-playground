@@ -21,7 +21,7 @@ app.post('/api/:queue', function(req, res) {
 app.get('/api/:queue', function(req, res) {
   const promise = q_service.getItem(req.params.queue, req.query.timeout)
   promise.then(function(item) {
-    res.send(item);
+    res.send(item.element);
   })
 });
 
