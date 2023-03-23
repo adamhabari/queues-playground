@@ -12,8 +12,10 @@ Run `docker compose up`
 
 ## Curl examples
 
-Add payload to queue `curl -v -XPOST -H "Content-type: application/json" -d '{"foo":"1"}' 'http://localhost/api/queue_4'`
+Add a  payload to queue 
+`curl -v -XPOST -H "Content-type: application/json" -d '{"foo":"1"}' 'http://localhost/api/queue_4'`
 
-Fetch payload froma queue with a 5 seconds timeout while measuring elapsed time `time curl -v  'http://localhost/api/queue_4?timeout=5000'`
+Fetch a  payload froma queue with a 5 seconds timeout while measuring elapsed time 
+`time curl -v  'http://localhost/api/queue_4?timeout=5000'`
 
 
