@@ -10,8 +10,6 @@ services:
     depends_on:
       - redis
     hostname: web1
-    volumes:
-      - ./web:/usr/src/app
     ports:
       - '81:5000'
   web2:
@@ -19,8 +17,6 @@ services:
     build: ./web
     depends_on:
     - redis
-    volumes:
-      - ./web:/usr/src/app
     hostname: web2
     ports:
       - '82:5000'
